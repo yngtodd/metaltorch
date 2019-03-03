@@ -1,0 +1,14 @@
+load('//:subdir_glob.bzl', 'subdir_glob')
+
+prebuilt_cxx_library(
+  name = 'libtorch',
+  exported_linker_flags = [
+    '-lc++',
+  ],
+  exported_headers = subdir_glob([
+    ("libtorch/include", "**/*.h"),
+  ]),
+  visibility = [
+    "PUBLIC",
+  ],
+)

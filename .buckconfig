@@ -6,3 +6,5 @@
 
 [cxx]
   should_remap_host_platform = true
+  gtest_dep = //googletest:gtest
+  libtorch_dep = //libtorch:libtorch
